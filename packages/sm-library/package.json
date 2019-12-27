@@ -1,6 +1,6 @@
 {
   "name": "sm-library",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "It contains SM required data, folder structure, implements pre-publish",
   "main": "index.js",
   "scripts": {
