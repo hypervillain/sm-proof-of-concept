@@ -12,6 +12,13 @@ This script is part of a package called `sm-commons`. Its methods sshould be use
 The package API holds a "fetch" method that takes an npm library name as parameter.
 It validates it and then fetches the slice definition path. It returns the array and should store it somewhere.
 
-To test it with real data: http://localhost:8000/fetch/sm-library
+To test it with real data:
+
+```bash
+cd packages;
+node index.js;
+open http://localhost:8000/fetch/sm-library
+
+```
 
 Note: it doesn't have to be a lerna project ✌️
