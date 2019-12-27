@@ -4,7 +4,7 @@ const app = express()
 const createPackageURLs = require("./package").createPackageURLs
 const fetchSliceDef = require("./fetch").fetchSliceDef
 
-const authorizedLibs = ["@any/thing", "sm-poc", "@babel/standalone"];
+const authorizedLibs = ["@any/thing", "sm-library", "@babel/standalone"];
 
 app.get("/fetch/*?", async function(req, res) {
   // Todo: check if token query param is valid
@@ -21,7 +21,8 @@ app.get("/fetch/*?", async function(req, res) {
 
     const sliceDef = await fetchSliceDef(urls);
 
-    console.log('here', sliceDef)
+    console.log('You can store this somewhere -->', sliceDef)
+
     res.send(sliceDef);
   } catch(e) {
     // Notify publisher
@@ -31,7 +32,7 @@ app.get("/fetch/*?", async function(req, res) {
 })
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send("Try this url: localhost:8000/fetch/sm-library");
 })
 
 app.listen(8000, () => {

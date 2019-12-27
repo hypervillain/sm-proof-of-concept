@@ -4,7 +4,10 @@
   "description": "It contains SM required data, folder structure, implements pre-publish",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "node node_modules/sm-commons/bundleApi"
+  },
+  "devDependencies": {
+    "sm-commons": "^1.0.0"
   },
   "author": "",
   "license": "ISC",

@@ -43,12 +43,14 @@ function canParsePackagePathname(pathname) {
  * createPackageURLs("@slice-machine/vue-essentials")
  * --> { config: "https://unpkg.com/@slice-machine/vue-essentials@latest/sm.config.json" }
  */
+
 function createPackageURLs(pathname) {
   const package = parsePackagePathname(pathname);
   if (!package) {
-    return new Error(`Cant parse package name "${pathname}"`);
+    throw new Error(`Cant parse package name "${pathname}"`);
   }
   const baseURL = `${UNPKG_URL}${package.packageSpec}`;
+
   return {
     baseURL,
     config: `${baseURL}/${SM_CONFIG_FILE}`,

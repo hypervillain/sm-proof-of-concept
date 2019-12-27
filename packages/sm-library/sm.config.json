@@ -1,3 +1,4 @@
 {
-    "libraryName": "My awesome library"
+    "libraryName": "My awesome library",
+    "framework": "nuxt"
 }
