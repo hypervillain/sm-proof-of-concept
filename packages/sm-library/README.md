@@ -1,3 +1,3 @@
 # Dummy library
 
-It contains SM required data, folder structure, implements pre-publish
+It should contain SM required data, folder structure, and implement pre-publish
