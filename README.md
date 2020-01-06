@@ -15,7 +15,7 @@ It validates it and then fetches the slice definition path. It returns the array
 To test it with real data:
 
 ```bash
-cd packages;
+cd packages/api;
 node index.js;
 open http://localhost:8000/fetch/sm-library
 
